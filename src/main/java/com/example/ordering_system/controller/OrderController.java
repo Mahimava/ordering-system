@@ -5,6 +5,6 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 	@GetMapping
     public String getOrder() {
-        return "Order placed successfully!";
+        return "Order placed successfully!  Refresh to place another order";
     }
 }
