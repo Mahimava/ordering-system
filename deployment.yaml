@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ordering-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ordering-system
+  template:
+    metadata:
+      labels:
+        app: ordering-system
+    spec:
+      containers:
+        - name: ordering-system
+          image: mahimav4/ordering-system:latest
+          ports:
+            - containerPort: 8089
+
